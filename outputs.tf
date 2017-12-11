@@ -27,3 +27,8 @@ output "security_group_id" {
   description = "The id of the security group attached to subnets inside the newly created vNet. Use this id to associate additional network security rules to subnets."
   value       = "${azurerm_network_security_group.security_group.id}"
 }
+
+output "security_group_name" {
+  description = "The name of the security group created by the module"
+  value       = "${azurerm_network_security_group.security_group.name}"
+}
